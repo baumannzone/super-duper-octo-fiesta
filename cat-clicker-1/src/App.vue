@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <hello></hello>
+    <h1>Cat Clicker</h1>
+    <div class="cat-container">
+      <cat></cat>
+    </div>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello';
+  import Cat from './components/Cat';
 
-export default {
-  name: 'app',
-  components: {
-    Hello,
-  },
-};
+  export default {
+    name: 'app',
+    components: {
+      Cat,
+    },
+  };
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>
