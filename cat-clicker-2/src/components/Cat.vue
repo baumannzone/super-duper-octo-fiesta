@@ -1,13 +1,17 @@
 <template>
   <div class="cat">
-    <img src="../assets/cat1.jpg" alt="cat" @click="increment(1)">
-    <pre> {{ timesClicked }} </pre>
+    <img :src="info.url" alt="cat" @click="increment(1)">
+    <p class="cat--name">Name: {{ info.name }} </p>
+    <pre>Clicks: {{ timesClicked }} </pre>
   </div>
 </template>
 
 <script>
   export default {
     name: 'cat',
+    props: [
+      'info',
+    ],
     data() {
       return {
         timesClicked: 0,
@@ -22,8 +26,21 @@
 </script>
 
 <style scoped>
+
+  .cat {
+    margin: 0 15px;
+  }
+
   img {
     height: 300px;
+  }
+
+  img:hover {
+    cursor: pointer;
+  }
+
+  .cat--name {
+    text-transform: capitalize;
   }
 
   pre {

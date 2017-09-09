@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Cat Clicker</h1>
+    <h1>{{ msg }}</h1>
     <div class="cat-container">
       <cat></cat>
     </div>
@@ -15,6 +15,11 @@
     components: {
       Cat,
     },
+    data() {
+      return {
+        msg: 'Cat Clicker 1',
+      };
+    },
   };
 </script>
 
@@ -25,6 +30,5 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 </style>
