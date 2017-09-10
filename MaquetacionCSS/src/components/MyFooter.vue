@@ -1,12 +1,14 @@
-<template>
-  <footer>
+<template lang="pug">
+  footer
+    nav.navbar.fixed-bottom.navbar-light.bg-light
+      .navbar.text
+        span.badge.badge-info 8 active users
 
-  </footer>
 </template>
 
 <script>
   export default {
-    name: 'hello',
+    name: 'my-footer',
     data() {
       return {
         msg: 'Welcome to Your Vue.js App',
