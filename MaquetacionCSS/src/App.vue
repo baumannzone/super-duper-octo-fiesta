@@ -21,6 +21,17 @@
 </script>
 
 <style lang="stylus">
+  // Mixins
+  vendor(prop, args)
+    -webkit-{prop} args
+    -moz-{prop} args
+    -ms-{prop} args
+    -o-{prop} args
+    {prop} args
+
+  transition()
+    vendor('transition', arguments)
+
   #app
     font-family 'Avenir', Helvetica, Arial, sans-serif
     -webkit-font-smoothing antialiased

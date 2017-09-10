@@ -78,9 +78,6 @@
 <style scoped lang="stylus">
 
   .hello
-    position relative
     margin-top 80px
-    min-height 300px
-
 
 </style>

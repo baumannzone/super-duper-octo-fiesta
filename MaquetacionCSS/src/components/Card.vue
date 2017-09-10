@@ -5,7 +5,7 @@
       .card-body
         p.card-text {{ data.title }}
       .card-body.d-flex.justify-content-end.align-items-end.pt-0
-        a.btn.btn-primary(:href="data.gifurl") Link
+        a.btn.btn-outline-primary.btn-sm(:href="data.gifurl") Go
 </template>
 
 <script>
@@ -20,8 +20,16 @@
 
 
 <style lang="stylus">
+
+  // Colors
+  card-shadow = #DADADA
+
   .card
     width 100%
+    transition box-shadow .15s linear
+
+    &:hover
+      box-shadow 0 0 6px 4px card-shadow
 
     .card-body-img
       min-height 10rem
