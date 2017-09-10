@@ -1,8 +1,8 @@
 <template lang="pug">
   .cat
-    img(:src="img.large", @click="increment(1)")
+    img(:src="detail.picture.large", @click="increment()")
     p.name {{ fullName }}
-    p.click {{ timesClicked }}
+    p.click {{ clicks }}
 
 </template>
 
@@ -10,31 +10,40 @@
   export default {
     name: 'cat',
     props: {
-      name: Object,
-      img: Object,
-      id: Object,
-    },
-    data() {
-      return {
-        timesClicked: 0,
-      };
+      detail: Object,
     },
     methods: {
       increment( num ) {
-        this.timesClicked += num;
+        this.detail.clicks += num || 1;
       },
     },
     computed: {
       fullName() {
-        return `${this.name.first} ${this.name.last}`;
+        return `${this.detail.name.first} ${this.detail.name.last}`;
+      },
+      clicks() {
+        return this.detail.clicks;
       },
     },
   };
 </script>
 
 <style lang="stylus">
-
   .cat
-    margin 0 20px
-    color: red
+    display block
+    margin-top 40px
+    padding 5px
+    border-bottom 3px solid #fafafa
+    &:hover
+      cursor pointer
+
+    img
+      border-radius 50%
+
+    p.name
+      text-transform capitalize
+
+    p.click
+      font-weight bolder
+
 </style>
