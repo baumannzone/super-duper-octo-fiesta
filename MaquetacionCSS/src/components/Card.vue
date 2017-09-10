@@ -20,8 +20,7 @@
 
 
 <style lang="stylus">
-
-  // Colors
+  // Color
   card-shadow = #DADADA
 
   .card

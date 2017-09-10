@@ -2,7 +2,7 @@
   .hello
     .row
       .col-md-12
-        h1 {{ msg }}
+        h1.mb-4 {{ msg }}
     .row.justify-content-start.align-items-stretch
       card(v-for="(card, index) in cards", :key="index", :data="card")
 
@@ -76,7 +76,6 @@
 
 
 <style scoped lang="stylus">
-
   .hello
     margin-top 80px
     margin-bottom 80px
