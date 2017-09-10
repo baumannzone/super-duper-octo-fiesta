@@ -1,9 +1,8 @@
-<template>
-  <div id="app" class="container">
-    <my-header></my-header>
-    <hello></hello>
-    <my-footer></my-footer>
-  </div>
+<template lang="pug">
+  #app.container
+    my-header
+    hello
+    my-footer
 </template>
 
 <script>
@@ -21,11 +20,11 @@
   };
 </script>
 
-<style>
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #444;
-  }
+<style lang="stylus">
+  #app
+    font-family 'Avenir', Helvetica, Arial, sans-serif
+    -webkit-font-smoothing antialiased
+    -moz-osx-font-smoothing grayscale
+    color #444
+
 </style>
