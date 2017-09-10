@@ -2,9 +2,9 @@
   header
     nav.navbar.navbar-expand-lg.navbar-light.bg-light.fixed-top
       a.navbar-brand(href="#") ACME Ltd.
-      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#myNav', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
         span.navbar-toggler-icon
-      .collapse.navbar-collapse.justify-content-end
+      #myNav.collapse.navbar-collapse.justify-content-end
         .navbar-text Jorge Baumann
 
 </template>
