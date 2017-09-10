@@ -1,17 +1,11 @@
 <template lang="pug">
-  //.col-md-4.my-card
-    .card-wrapper
-      img.card-img(:src="data.gifurl")
-      p.card-text {{ data.title }}
   .col-sm-6.col-md-4.col-lg-3.d-flex.mb-4
     .card
-      img.card-img-top(:src="data.gifurl")
+      .card-body-img( :style="{ backgroundImage: `url('${data.gifurl}')` }" )
       .card-body
         p.card-text {{ data.title }}
-      .card-body.d-flex.justify-content-end.align-items-end
-        a.btn.btn-primary(href="#") Link
-
-
+      .card-body.d-flex.justify-content-end.align-items-end.pt-0
+        a.btn.btn-primary(:href="data.gifurl") Link
 </template>
 
 <script>
@@ -25,9 +19,13 @@
 </script>
 
 
-<style scoped lang="stylus">
-  /*.my-card-cont*/
-    /*img*/
-      /*max-width 100%*/
+<style lang="stylus">
+  .card
+    width 100%
+
+    .card-body-img
+      min-height 10rem
+      background-position center
+      background-size cover
 
 </style>

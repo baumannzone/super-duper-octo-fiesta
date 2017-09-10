@@ -2,7 +2,7 @@
   .hello
     .row
       .col-md-12
-        h1 Nice Pictures
+        h1 {{ msg }}
     .row.justify-content-start.align-items-stretch
       card(v-for="(card, index) in cards", :key="index", :data="card")
 
@@ -17,6 +17,7 @@
       Card,
     },
     mounted() {
+      // Fake GET request
       this.cards = [
         {
           gifurl: 'http://tclhost.com/bxRvNRA.gif',
@@ -66,7 +67,7 @@
     },
     data() {
       return {
-        msg: 'Welcome to Your Vue.js App',
+        msg: 'Nice pictures',
         cards: null,
       };
     },
