@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6389db81-86c0-4c3c-b715-43871988a85d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/cupones/src/data/data.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -76,6 +76,7 @@
         <option value="$PROJECT_DIR$/MaquetacionCSS/src/components/Card.vue" />
         <option value="$PROJECT_DIR$/MaquetacionCSS/src/components/MyHeader.vue" />
         <option value="$PROJECT_DIR$/MaquetacionCSS/src/components/MyFooter.vue" />
+        <option value="$PROJECT_DIR$/cupones/src/data/data.json" />
       </list>
     </option>
   </component>
@@ -134,6 +135,19 @@
               <item name="super-duper-octo-fiesta" type="b2602c69:ProjectViewProjectNode" />
               <item name="super-duper-octo-fiesta" type="462c0819:PsiDirectoryNode" />
               <item name="cupones" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="super-duper-octo-fiesta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-duper-octo-fiesta" type="462c0819:PsiDirectoryNode" />
+              <item name="cupones" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="super-duper-octo-fiesta" type="b2602c69:ProjectViewProjectNode" />
+              <item name="super-duper-octo-fiesta" type="462c0819:PsiDirectoryNode" />
+              <item name="cupones" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -197,12 +211,12 @@
       <updated>1504894954656</updated>
       <workItem from="1504894960061" duration="2548000" />
       <workItem from="1504898240181" duration="56813000" />
-      <workItem from="1505578886576" duration="775000" />
+      <workItem from="1505578886576" duration="1006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60136000" />
+    <option name="totallyTimeSpent" value="60367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="22" y="23" width="1196" height="777" extended-state="0" />
@@ -538,6 +552,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="77" column="28" lean-forward="false" selection-start-line="77" selection-start-column="28" selection-end-line="77" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cupones/src/data/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="2298" column="0" lean-forward="true" selection-start-line="2298" selection-start-column="0" selection-end-line="2298" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
