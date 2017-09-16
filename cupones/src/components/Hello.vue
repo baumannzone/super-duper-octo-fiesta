@@ -1,53 +1,78 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-      <br>
-      <li><a href="http://vuejs-templates.github.io/webpack/" target="_blank">Docs for This Template</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
+  <div class="container">
+    <header></header>
+    <div class="section-1"></div>
+    <div class="section-2"></div>
+    <div class="section-3"></div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'hello',
-  data() {
-    return {
-      msg: 'Welcome to Your Vue.js App',
-    };
-  },
-};
+  /* global d3 _ */
+
+  import json from '../data/data.json';
+
+  export default {
+    name: 'hello',
+    mounted() {
+      this.json = json;
+      const title = json.msg;
+      const coupons = json.coupons;
+
+      // Title
+      d3.select( 'header' )
+        .append( 'h1' )
+        .text( title );
+
+      // Demo
+      const data = [ 30, 86, 168, 281, 303, 365 ];
+      d3.select( '.section-1' )
+        .selectAll( 'div' )
+        .data( data )
+        .enter()
+        .append( 'div' )
+        .style( 'width', d => `${d}px` )
+        .text( d => d );
+
+      // Section 2
+      // Offers by webShop
+      const webShops = coupons.map( c => c.webshop_id );
+      const counts = {};
+      webShops.forEach( ( x ) => {
+        counts[ x ] = ( counts[ x ] || 0 ) + 1;
+      } );
+
+      d3.select( '.section-2' )
+        .selectAll( 'div' );
+
+      console.debug( webShops, counts );
+
+      const lmao = _;
+      console.warn( lmao );
+    },
+    data() {
+      return {
+        msg: 'Welcome to Your Vue.js App',
+        json: null,
+      };
+    },
+  };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+<style lang="stylus">
+  .container
+    position relative
+    padding 20px
+    /*width 800px*/
+    background-color #fafafa
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  .section-1 div
+    font: 10px sans-serif;
+    background-color: steelblue;
+    text-align: right;
+    padding: 3px;
+    margin: 1px;
+    color: white;
 
-a {
-  color: #42b983;
-}
 </style>
