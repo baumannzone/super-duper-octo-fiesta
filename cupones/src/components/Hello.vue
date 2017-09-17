@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <header></header>
-    <div class="section-1"></div>
-    <div class="section-2"></div>
-    <div class="section-3"></div>
+    <header class="main-title"></header>
+    <section class="section-1">
+    </section>
+    <section class="section-2">
+    </section>
   </div>
 </template>
 
@@ -20,30 +21,29 @@
       const coupons = json.coupons;
 
       // Title
-      d3.select( 'header' )
+      d3.select( '.main-title' )
         .append( 'h1' )
         .text( title );
 
-      // Demo
-      const data = [ 30, 86, 168, 281, 303, 365 ];
-      d3.select( '.section-1' )
-        .selectAll( 'div' )
-        .data( data )
-        .enter()
-        .append( 'div' )
-        .style( 'width', d => `${d}px` )
-        .text( d => d );
-
-      // Section 2
+      // Section 1
       // Offers by webShop
+      d3.select( '.section-1' )
+        .append( 'h3' )
+        .text( 'Number of coupons by webShop id' );
+
       const webShops = coupons.map( c => c.webshop_id );
       const counts = {};
       webShops.forEach( ( x ) => {
         counts[ x ] = ( counts[ x ] || 0 ) + 1;
       } );
 
-      d3.select( '.section-2' )
-        .selectAll( 'div' );
+      d3.select( '.section-1' )
+        .selectAll( 'div' )
+        .data( Object.values( counts ) )
+        .enter()
+        .append( 'div' )
+        .style( 'width', d => `${d}%` )
+        .text( d => d );
 
       console.debug( webShops, counts );
 
@@ -64,15 +64,20 @@
   .container
     position relative
     padding 20px
-    /*width 800px*/
+    width 600px
     background-color #fafafa
 
-  .section-1 div
-    font: 10px sans-serif;
-    background-color: steelblue;
+  section
+    position relative
+    padding 20px 0
+    border-top 3px solid #f1f1f1
+
+  .section-1 div,
+  .section-2 div
+    background-color: #9c27b0;
     text-align: right;
-    padding: 3px;
-    margin: 1px;
+    padding: 6px;
+    margin: 2px;
     color: white;
 
 </style>
